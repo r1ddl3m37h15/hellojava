@@ -1,0 +1,12 @@
+stages:
+  - build
+
+build:
+  stage: build
+  image: r1ddl3m37h15/jdk8-ant
+  tags:
+    - docker-node:12.19.0
+  script:
+    - echo info: $(date) $(hostname) $(whoami) $(pwd)
+    - javac -version
+    - ant
