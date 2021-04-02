@@ -7,6 +7,6 @@ build:
   tags:
     - docker-node:12.19.0
   script:
-    - echo info: $(date) $(hostname) $(whoami) $(pwd)
+    - echo info $(date) $(hostname) $(whoami) $(pwd)
     - javac -version
     - ant
