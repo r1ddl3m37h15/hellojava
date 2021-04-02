@@ -1,0 +1,54 @@
+<project
+  basedir="."
+  default="cleanrun"
+  name="HelloMercury"
+>
+
+  <target name="init">
+    <property name="build.dir" value="../../build"/>
+    <property name="build.dir.app" value="${build.dir}/${ant.project.name}"/>
+    <echo message="target init done."/>
+  </target>
+
+  <target name="clean" depends="init">
+    <delete dir="${build.dir.app}"/>
+    <echo message="target clean done."/>
+  </target>
+
+  <target name="compile" depends="init">
+    <mkdir dir="${build.dir.app}/classes"/>
+    <javac srcdir="src" destdir="${build.dir.app}/classes"/>
+    <echo message="target compile done."/>
+  </target>
+
+  <target name="jar" depends="init">
+    <mkdir dir="${build.dir.app}/jar"/>
+    <jar
+      destfile="${build.dir.app}/jar/${ant.project.name}.jar"
+      basedir="${build.dir.app}/classes"
+    >
+      <manifest>
+        <attribute name="Main-Class" value="oata.HelloWorld"/>
+      </manifest>
+    </jar>
+    <echo message="target jar done."/>
+  </target>
+
+  <target name="run" depends="init">
+    <java
+      jar="${build.dir.app}/jar/${ant.project.name}.jar"
+      fork="true"
+    />
+  </target>
+
+  <target name="cleanrun" depends="init,clean,compile,jar,run">
+    <echo message="target cleanrun done."/>
+  </target>
+
+  <target name = "hello" depends="init">
+    <!-- see all the properties -->
+    <echoproperties/>
+    <echo message="target hello done."/>
+  </target>
+
+</project>
