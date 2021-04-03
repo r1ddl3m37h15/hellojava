@@ -43,6 +43,7 @@
     <!-- clean task at project level -->
     <delete dir="${build.dir}" />
     <delete dir="${dist.dir}" />
+    <delete file="${build.meta}" />
     <delete file="${version.html}" />
     <echo message="target clean done." />
   </target>
