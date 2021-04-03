@@ -1,0 +1,15 @@
+*.class
+*[EeJjWw]ar
+[Ll]ib/*
+[Dd]ist/*
+[Ll]og/*
+[Bb]uild/*
+/build.number
+/build.properites
+/build.metadata.properties
+/version.properties
+/version.html
+
+build.config
+*.orig
+.DS_Store
