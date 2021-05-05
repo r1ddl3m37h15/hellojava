@@ -3,7 +3,7 @@ stages:
 
 build:
   stage: build
-  image: r1ddl3m37h15/jdk8-ant
+  image: r1ddl3m37h15/jdk8-ant:v2
   tags:
     - docker, linux
   only:

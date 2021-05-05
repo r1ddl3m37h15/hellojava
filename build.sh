@@ -18,5 +18,5 @@ docker run --rm \
   -w /usr/src/myapp \
   -e JOB_NUMBER=$JOB_NUMBER \
   -e LOG_URL=$LOG_URL \
-  r1ddl3m37h15/jdk8-ant:latest \
+  r1ddl3m37h15/jdk8-ant:v2 \
   ant $*
