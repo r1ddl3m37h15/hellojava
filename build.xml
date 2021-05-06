@@ -98,8 +98,8 @@
 		<echo message="ant.project.name=${ant.project.name}" level="info" />
 		<echo message="git.branch=${git.branch}" level="info" />
 		<echo message="git.revision=${git.revision}" level="info" />
-		<echo message="JOB_NUMBER=${env.JOB_NUMBER}" level="info" />
-		<echo message="LOG_URL=${env.LOG_URL}" level="info" />
+		<echo message="JOB_NUMBER=${env.CI_JOB_ID}" level="info" />
+		<echo message="LOG_URL=${env.CI_PIPELINE_URL}" level="info" />
 
 		<!-- create anew a build metadata file -->
 		<echo file="${build.meta}" message="TODAY=${env.ts}${line.separator}" append="false" />
