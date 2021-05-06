@@ -1,4 +1,4 @@
-<project basedir="." default="compileall" name="HelloJava">
+<project basedir="." default="HelloWorld" name="HelloJava">
 
   <!-- Build the planets in their order from the sun even though they are listed alphabetically below. -->
 
@@ -7,7 +7,7 @@
   <property name="build.dir" value="build/${ant.project.name}" />
   <echo message="$${build.dir}=${build.dir}" level="info" />
 
-  <property name="dist.dir" value="../../../was/${ant.project.name}" />
+  <property name="dist.dir" value="./was/${ant.project.name}" />
   <echo message="$${dist.dir}=${dist.dir}" level="info" />
 
   <!-- 
