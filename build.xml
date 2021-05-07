@@ -118,8 +118,8 @@
           <token key="ant.project.name" value="${ant.project.name}" />
           <token key="git.branch" value="${git.branch}" />
           <token key="git.revision" value="${git.revision}" />
-          <token key="JOB_NUMBER" value="${env.JOB_NUMBER}" />
-					<token key="LOG_URL" value="${env.LOG_URL}" />
+          <token key="build.number" value="${env.CI_JOB_ID}" />
+					<token key="LOG_URL" value="${env.CI_PIPELINE_URL}" />
         </replacetokens>
       </filterchain>
     </copy>
