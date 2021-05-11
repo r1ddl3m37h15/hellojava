@@ -12,4 +12,5 @@ build:
   script:
     - echo info $(date) $(hostname) $(whoami) $(pwd)
     - javac -version
+    - env | sort
     - ant
